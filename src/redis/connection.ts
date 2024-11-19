@@ -1,11 +1,11 @@
+import { getErrorMessage } from '@jobhunt-microservices/jobhunt-shared';
 import { config } from '@order/config';
 import { SERVICE_NAME } from '@order/constants';
 import { logger } from '@order/utils/logger.util';
-import { getErrorMessage } from '@jobhunt-microservices/jobhunt-shared';
 import { createClient } from 'redis';
 
 type RedisClient = ReturnType<typeof createClient>;
-const log = logger('gigRedisConnection', 'debug');
+const log = logger('orderRedisConnection', 'debug');
 
 const client: RedisClient = createClient({ url: `${config.REDIS_HOST}` });
 

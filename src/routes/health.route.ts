@@ -8,7 +8,7 @@ class HealthRoutes {
   }
 
   public routes(): Router {
-    this.router.get('/gig-health', healthController.health);
+    this.router.get('/order-health', healthController.health);
     return this.router;
   }
 }
